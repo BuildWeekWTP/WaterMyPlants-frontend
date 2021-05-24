@@ -1,9 +1,15 @@
 import React from 'react'
+import Nav from './components/Nav'
+import Login from './components/Login'
+import { Route, Link } from 'react-router-dom'
+import Signup from "./components/Signup";
 
 function App() {
   return (
-    <div className="App">
-      <h1>Water My Plants</h1>
+    <div>
+      <Nav />
+      <Route exact path='/' component={Login}/>
+      <Route exact path='/signup' component={Signup}/>
     </div>
   );
 }
