@@ -3,8 +3,8 @@ import React from 'react'
 function Signup() {
   return(
     <>
-      <div class="container">
-        <div class="title">
+      <div className="container">
+        <div className="title">
           <h2>Sign Up</h2>
         </div>
         

@@ -3,8 +3,8 @@ import React from 'react'
 function Login() {
   return(
     <>
-      <div class="container">
-        <div class="title">
+      <div className="container">
+        <div className="title">
           <h2>Login</h2>
         </div>
         
