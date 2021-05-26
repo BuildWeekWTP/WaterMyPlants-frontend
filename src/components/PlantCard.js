@@ -1,6 +1,9 @@
 import React from 'react'
 
-function PlantCard() {
+function PlantCard(props) {
+
+  const { name, species, waterFreq } = props
+
   return(
   <>
     <div className="plant-card">
@@ -9,8 +12,9 @@ function PlantCard() {
       </div>
   
     <div className="plant-stats">
-      <h3 id="plant-name">Mr.green</h3>
-      <p>Lorem lorem</p>
+      <h3 id="plant-name">{name}</h3>
+      <p id="species">{species}</p>
+      <p>{waterFreq}</p>
     </div>
   </div>
   </>
