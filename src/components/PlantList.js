@@ -1,8 +1,29 @@
-import React from 'react'
+import axios from 'axios';
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import PlantCard from "./PlantCard"
 
 function PlantList() {
+
+  const [list,setList] = useState([]);
+  
+
+  useEffect(() =>{
+     axios.get('https://waterplants5.herokuapp.com/api/users/1/plants')/*, {      //work on getting list of specific signed in user made plants/ make new plant paramaters(id, name...)
+        headers: {
+          authorization: localStorage.getItem('token')
+        }
+      })*/
+      .then(res => {
+        console.log(res.data)
+        setList(res.data)
+      })
+      .catch(err => {
+        console.log(err)
+      })
+  }, [])
+
+  
   return(
     <>
       <div className="hero">
