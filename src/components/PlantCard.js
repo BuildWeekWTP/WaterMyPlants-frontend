@@ -10,11 +10,18 @@ function PlantCard(props) {
       <div className="plant-image">
         {/* is background-image */}
       </div>
-  
-    <div className="plant-stats">
-      <h3 id="plant-name">{name}</h3>
-      <p id="species">{species}</p>
-      <p>{waterFreq}</p>
+    
+    <div className="plant-info-container">
+      <div className="plant-stats">
+        <h3 id="plant-name">{name}</h3>
+        <p id="species">{species}</p>
+        <p>{waterFreq}</p>
+    </div>
+
+      <div class="plant-buttons">
+        <button id="edit">Edit</button>
+        <button id="delete">Delete</button>
+      </div>
     </div>
   </div>
   </>

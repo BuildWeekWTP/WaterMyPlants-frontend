@@ -57,12 +57,8 @@ function PlantList() {
   return(
     <>
       <div className="hero">
-
-        <div className="hero-text">
-          <h2>My plants</h2>
-          {/* <button>New Plant +</button> */}
-          <Link id="createNew" to='/plantForm'>New Plant +</Link>
-        </div>
+        <h2>My plants</h2>
+        <Link to='/plantForm'>New Plant +</Link>
       </div>
 
       {plantList.map(plant => {
