@@ -42,7 +42,7 @@ class Signup extends React.Component {
           <h2>Sign Up</h2>
         </div>
         
-        <form>
+        <form onSubmit={this.Register}>
 
           <input
             name="user_username"

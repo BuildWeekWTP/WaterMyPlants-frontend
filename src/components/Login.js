@@ -4,10 +4,10 @@ import React from 'react'
 class Login extends React.Component {
   state = {
     Credentials: {
-      user_username:'ted',
-      user_password:'foobar',
-      user_email:'ted@place.com',
-      user_phone_number:'1875309'
+      user_username:'',
+      user_password:'',
+      user_email:'',
+      user_phone_number:''
     }
   };
 
@@ -44,7 +44,7 @@ class Login extends React.Component {
         <form onSubmit={this.login}>
 
           <input
-            name="username"
+            name="user_username"
             type="text"
             value={this.state.Credentials.user_username}
             onChange={this.handleChange}
@@ -52,7 +52,7 @@ class Login extends React.Component {
           />
 
           <input
-            name="password"
+            name="user_password"
             type="password"
             value={this.state.Credentials.user_password}
             onChange={this.handleChange}
@@ -60,7 +60,7 @@ class Login extends React.Component {
           />
 
           <input 
-          name="email"
+          name="user_email"
           type="email"
           value={this.state.Credentials.user_email}
           onChange={this.handleChange}
@@ -68,7 +68,7 @@ class Login extends React.Component {
           />
 
           <input 
-          name="phoneNumber"
+          name="user_phone_number"
           type="tel"
           value={this.state.Credentials.user_phone_number}
           onChange={this.handleChange}
