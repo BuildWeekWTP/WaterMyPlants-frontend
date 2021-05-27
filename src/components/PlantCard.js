@@ -2,12 +2,8 @@ import React from 'react'
 import {useEffect, useState} from 'react'
 import axios from 'axios'
 
-
-
 function PlantCard() {
-
   const [list,setList] = useState([]);
-
   
   const deleteReq = () =>{ axios.delete('https://waterplants5.herokuapp.com/api/plants', listMap)
     .then((res)=>{
