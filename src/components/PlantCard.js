@@ -18,7 +18,7 @@ function PlantCard(props) {
         <p>{waterFreq}</p>
     </div>
 
-      <div class="plant-buttons">
+      <div className="plant-buttons">
         <button id="edit">Edit</button>
         <button id="delete">Delete</button>
       </div>
