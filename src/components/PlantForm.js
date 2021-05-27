@@ -25,6 +25,7 @@ class PlantForm extends React.Component {
     axios.post('https://waterplants5.herokuapp.com/api/plants', this.state) 
     .then(res => {
       console.log(res)
+      this.props.history.push('/MyPlants')
     })
     .catch(err => {
       console.log(err);
