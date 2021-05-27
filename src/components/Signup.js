@@ -26,8 +26,7 @@ class Signup extends React.Component {
     e.preventDefault();
     axios.post('https://waterplants5.herokuapp.com/api/auth/register', this.state.Credentials)
     .then(res => {
-      localStorage.setItem('token', res.data.token);
-      this.props.history.push('/myPlants')
+      this.props.history.push('/')
     })
     .catch(err => {
       console.log(err);
