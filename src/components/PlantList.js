@@ -8,6 +8,7 @@ function PlantList() {
         <h2>My plants</h2>
         <Link to='/plantForm'>New Plant +</Link>
       </div>
+      <PlantCard />
     </>
   )
 }
