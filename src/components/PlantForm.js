@@ -6,7 +6,7 @@ class PlantForm extends React.Component {
 
 
   state = {
-      plant_id:2,
+      plant_id:'',
       plant_nickname:'',
       plant_species:'',
       plant_h2ofrequency:'',
@@ -22,9 +22,12 @@ class PlantForm extends React.Component {
 
   plant = e => {
     e.preventDefault();
-    axios.post('https://waterplants5.herokuapp.com/api/plants', this.state) 
+    axios.post('https://waterplants5.herokuapp.com/api/plants', {...this.state},{
+    headers: {
+      authorization: localStorage.getItem('token')
+    }}) 
     .then(res => {
-      console.log(res)
+      console.log("DISPLAY",res)
       this.props.history.push('/MyPlants')
     })
     .catch(err => {
